@@ -1,6 +1,12 @@
 palmago-streetview
 ---
 
+> **Important**: This codebase is not to be considered fully 'idiomatic go'. Whilst there are some examples of this,
+such as the `New` factory method convention, it intentionally does not have everything lowercased, small variable names, 
+shorter filenames, packages with everything in one file, tests next to the code etc. What it is, however, is an example 
+of a solid software architecture and general software engineering best practices for maintainable code. Focus on the
+solution, not on the coding standards.
+
 This is an example codebase showcasing how I would expect a simple to understand microservice to function with Go. This
 code is standalone and can be communicated with over Grpc. You can find the API in 
 [api/proto/v1/service.proto](./api/proto/v1/service.proto).
