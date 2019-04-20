@@ -36,6 +36,8 @@ the relevant parameters from `docker.env`. Try the following:
 GRPC_SERVER_HOST= ELASTICSEARCH_HOST=localhost REDIS_HOST=localhost go run .
 ```
 
+To view Kibana logs, visit: `localhost:5601`!
+
 ## Features
 
 ##### Distributed System Resiliency
@@ -133,6 +135,10 @@ Finally, any failed calls to elastic search fallback and are written to `docker/
 
 If you want to test this yourself, first run everything, then kill the elastic stack (`make kill-elasticstack`), then 
 try making GRPC calls and watch the buffered log file fill up.
+
+Here's what you can expect to see in the Kibana logs:
+
+![https://user-images.githubusercontent.com/2657310/56459031-85a1f380-638e-11e9-9e1b-c91a15529943.png](https://user-images.githubusercontent.com/2657310/56459031-85a1f380-638e-11e9-9e1b-c91a15529943.png)
 
 ##### FAQ
 
