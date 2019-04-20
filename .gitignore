@@ -1,0 +1,9 @@
+.idea/
+vendor/
+
+# Docker builds
+docker/app/logs/**
+!docker/app/logs/.gitkeep
+docker/elasticsearch/shared-data/nodes/**
+!docker/elasticsearch/shared-data/nodes/.gitkeep
+docker/docker.env

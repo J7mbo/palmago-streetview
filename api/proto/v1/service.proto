@@ -1,0 +1,16 @@
+syntax = "proto3";
+package v1;
+
+service StreetviewService {
+    rpc GetStreetViewImage (GetStreetViewRequest) returns (GetStreetViewResponse) {}
+}
+
+message GetStreetViewRequest {
+    string correlationId = 1;
+    float latitude = 2;
+    float longitude = 3;
+}
+
+message GetStreetViewResponse {
+    bytes image = 1;
+}

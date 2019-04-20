@@ -1,0 +1,19 @@
+version: "3"
+services:
+  palmago-redis:
+    container_name: palmago-redis
+    hostname: palmago-redis
+    build:
+      context: .
+      dockerfile: ./redis/Dockerfile
+    environment:
+      - "REDIS_HOST=${REDIS_HOST}"
+      - "REDIS_PORT=${REDIS_PORT}"
+    ports:
+      - "${REDIS_EXPOSED_PORT}:${REDIS_EXPOSED_PORT}"
+    networks:
+      - palmago-net
+
+networks:
+  palmago-net:
+    external: true

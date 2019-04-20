@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# REDIS_PORT is set in the Redis Dockerfile and defaults to 6379. Env vars in docker.env override it.
+exec /usr/local/bin/redis-server /etc/redis/redis.conf --port ${REDIS_PORT}
