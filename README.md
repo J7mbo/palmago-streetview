@@ -52,7 +52,7 @@ A few DS resiliency patterns can be found here.
 
 - Timeouts for communicating with Google Streetview.
 - A correlation id for tracking the call throughout the distributed system.
-- A retrier with backoff, jitter for all network calls (my lib [methodcallretrier](github.com/j7mbo/methodcallretrier)). 
+- A retrier with backoff, jitter for all network calls (my lib [methodcallretrier](http://github.com/j7mbo/methodcallretrier)). 
 
 ##### High-level architecture (DDD)
 
@@ -70,7 +70,7 @@ I wrote a completely automatic recursive dependency injector called Goij solely 
 runtime dependency injection, with the result that I can add either public properties or new fields to factory methods 
 and have the instance I want automatically provisioned and injected for me with no extra configuration.
 
-Here is the library I wrote: [Goij](github.com/j7mbo/goij). Check it out and contribute! It's miles off of where it
+Here is the library I wrote: [Goij](http://github.com/j7mbo/goij). Check it out and contribute! It's miles off of where it
 should be but the concept is solid.
 
 ##### Infrastructure
@@ -79,7 +79,7 @@ You can see how I utilise docker and environment variables to use within the app
 a two-step build process to run the statically built binary in a very small scratch container with no privileges.
 
 Environment variables are loaded automatically into configuration structs with private properties, found in `Config/`, 
-through the use of a library I wrote with a bit of dark magic: [goenvconfig](github.com/j7mbo/goenvconfig).
+through the use of a library I wrote with a bit of dark magic: [goenvconfig](http://github.com/j7mbo/goenvconfig).
 
 Redis is used as a fast cache and only Warnings are emitted in the case that the cache is unreachable.
 
@@ -145,9 +145,3 @@ try making GRPC calls and watch the buffered log file fill up.
 Here's what you can expect to see in the Kibana logs:
 
 ![https://user-images.githubusercontent.com/2657310/56459031-85a1f380-638e-11e9-9e1b-c91a15529943.png](https://user-images.githubusercontent.com/2657310/56459031-85a1f380-638e-11e9-9e1b-c91a15529943.png)
-
-##### FAQ
-
-> This is not idiomatic Go.
-
-Sorry, too busy shipping working and well architected software to listen.
